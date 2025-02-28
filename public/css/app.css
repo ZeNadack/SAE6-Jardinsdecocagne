@@ -1,0 +1,160 @@
+/* Couleurs modernes */
+:root {
+    --primary-color: #4CAF50; /* Vert */
+    --secondary-color: #FFC107; /* Jaune */
+    --background-color: #F5F5F5; /* Gris clair */
+    --text-color: #333333; /* Noir */
+}
+
+/* Style général */
+body {
+    background-image: url('../imgs/fond.png'); /* Chemin vers l'image */
+    background-size: cover; /* L'image couvre toute la page */
+    background-position: center; /* Centre l'image */
+    background-attachment: fixed; /* L'image reste fixe lors du défilement */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    padding-top: var(--navbar-height); /* Compense la navbar fixe */
+}
+
+/* Assombrir l'image de fond pour améliorer la lisibilité */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Assombrit l'image de fond */
+    z-index: -1; /* Place l'assombrissement derrière le contenu */
+}
+
+/* Ajuster la couleur du texte pour qu'il soit lisible */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent pour le contenu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.espace{
+    margin-bottom: 30px;
+}
+
+.container-fluid img{
+    height: 5%;
+    width: 5%;
+    margin-top: -2%;
+    margin-bottom: -2%;
+    display: flex;
+}
+
+/* En-tête */
+.navbar {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 70px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+/* Cartes */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Boutons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #45a049; /* Vert plus foncé */
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #e0a800; /* Jaune plus foncé */
+}
+
+/* Formulaire */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Tableaux */
+.table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.table td, .table th {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Icônes */
+.fas {
+    margin-right: 5px;
+}
+
+/* Espacement */
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
